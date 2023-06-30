@@ -1,71 +1,50 @@
-# codely README
+# codely
 
-This is the README for your extension "codely". After writing up a brief description, we recommend including the following sections.
+The codely extension is designed to open a specific file and position the cursor at a specified line and column within Visual Studio Code.
 
 ## Features
 
-`README.md:13:66`
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Open files with specified line and column positions.
+- Automatically position the cursor at the specified location.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code version 1.79.0 or newer.
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Launch Visual Studio Code.
+2. Go to the Extensions view by clicking on the square icon on the left sidebar or by pressing `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS).
+3. Search for "codely" in the Extensions view.
+4. Click the Install button next to the "codely" extension.
+5. Reload Visual Studio Code to activate the extension.
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+1. Copy a string of the format `relative_path:line_number:column_number` to the clipboard.
+2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) to open the command palette.
+3. Type "Open String Location" and select the command from the list.
+4. The extension will open the specified file and position the cursor at the specified line and column.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Configuration
+
+The codely extension does not require any configuration.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- If the specified file does not exist, an error message will be displayed.
+- If the specified line or column number is invalid, the cursor may not be positioned correctly.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+- Initial release of codely extension.
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE).

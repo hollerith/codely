@@ -1,21 +1,25 @@
 {
     "name": "codely",
     "displayName": "codely",
-    "description": "opens the path in the editor",
+    "description": "opens the clipboard path in the editor",
     "version": "0.0.1",
+    "publisher": "hollerith",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hollerith/codely.git"
+    },
     "engines": {
         "vscode": "^1.79.0"
     },
     "categories": [
         "Other"
     ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
-            {
-                "command": "codely.helloWorld",
-                "title": "Hello World"
-            },
             {
                 "command": "extension.openStringLocation",
                 "title": "Open String Location"
@@ -23,12 +27,8 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
+        "package": "vsce package"
     },
     "devDependencies": {
         "@types/vscode": "^1.79.0",
@@ -41,6 +41,7 @@
         "glob": "^8.0.3",
         "mocha": "^10.1.0",
         "typescript": "^4.9.3",
-        "@vscode/test-electron": "^2.2.0"
+        "@vscode/test-electron": "^2.2.0",
+        "vsce": "^1.110.1"
     }
 }
